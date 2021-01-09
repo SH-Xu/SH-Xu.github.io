@@ -1,10 +1,19 @@
-## Welcome to my personal homepage
 
-I am currently a student studying at QMUL for my MS degree.
+My name is ShuaiHan Xu. You can also call me Joshua or Josh.
 
-### Markdown
+Currently I am studying at QMUL for my MS degree.
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+### Contact
+
+Email: ec20865@qmul.ac.uk / 240495108@qq.com
+
+### Interests
+
+I have a pretty wide interests in the field of data science.
+
+Mainly they are computer vision, graphics and data analysis.
+
+
 
 ```markdown
 Syntax highlighted code block
