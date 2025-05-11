@@ -1,17 +1,144 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>我的学术简历</title>
+    <title>徐世浩的学术简历</title>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
-        body { font-family: Arial; max-width: 800px; margin: 0 auto; padding: 20px; }
-        .lang-btn { text-align: right; margin-bottom: 20px; }
-        .hidden { display: none; }
-        img.photo { width: 150px; border-radius: 50%; float: right; }
-        h1 { border-bottom: 1px solid #eee; padding-bottom: 10px; }
-        a { color: #0066cc; text-decoration: none; }
-        ul { padding-left: 20px; }
-        strong { font-weight: bold; }
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #3498db;
+            --accent-color: #e74c3c;
+            --light-bg: #f8f9fa;
+            --text-color: #333;
+            --text-light: #7f8c8d;
+        }
+        
+        body {
+            font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--light-bg);
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        .lang-btn {
+            text-align: right;
+            margin-bottom: 20px;
+        }
+        
+        .hidden {
+            display: none;
+        }
+        
+        img.photo {
+            width: 160px;
+            border-radius: 50%;
+            border: 4px solid white;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            float: right;
+            margin-left: 30px;
+        }
+        
+        h1 {
+            color: var(--primary-color);
+            border-bottom: 2px solid var(--secondary-color);
+            padding-bottom: 10px;
+            margin-top: 0;
+        }
+        
+        h2 {
+            color: var(--primary-color);
+            margin-top: 30px;
+            border-left: 4px solid var(--secondary-color);
+            padding-left: 10px;
+        }
+        
+        a {
+            color: var(--secondary-color);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        a:hover {
+            color: var(--accent-color);
+            text-decoration: underline;
+        }
+        
+        ul {
+            padding-left: 20px;
+        }
+        
+        li {
+            margin-bottom: 8px;
+        }
+        
+        strong {
+            font-weight: 600;
+            color: var(--primary-color);
+        }
+        
+        .publication-item {
+            background: white;
+            padding: 15px;
+            margin-bottom: 15px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        .publication-item:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .publication-title {
+            font-weight: 600;
+            color: var(--primary-color);
+            margin-bottom: 5px;
+        }
+        
+        .publication-authors {
+            color: var(--text-light);
+            font-size: 0.95em;
+            margin-bottom: 5px;
+        }
+        
+        .publication-journal {
+            font-style: italic;
+            color: var(--text-light);
+            margin-bottom: 5px;
+        }
+        
+        .publication-link {
+            display: inline-block;
+            background: var(--secondary-color);
+            color: white;
+            padding: 3px 10px;
+            border-radius: 3px;
+            font-size: 0.9em;
+            margin-top: 5px;
+            transition: background 0.3s;
+        }
+        
+        .publication-link:hover {
+            background: var(--accent-color);
+            text-decoration: none;
+        }
+        
+        @media (max-width: 768px) {
+            img.photo {
+                float: none;
+                display: block;
+                margin: 0 auto 20px;
+            }
+            
+            body {
+                padding: 15px;
+            }
+        }
     </style>
 </head>
 <body>
@@ -24,7 +151,7 @@
     <!-- 中文内容 -->
     <div id="zh">
         <img src="images/photo.jpg" alt="照片" class="photo">
-        <h1><strong>徐世浩</strong>的简历</h1>
+        <h1><strong>徐世浩</strong>的学术简历</h1>
         
         <h2>教育背景</h2>
         <ul>
@@ -40,17 +167,26 @@
             <li>Google Scholar: <a href="https://scholar.google.com/citations?user=9hKtbYYAAAAJ" target="_blank">我的谷歌学术主页</a></li>
         </ul>
 
-        <h2>发表论文</h2>
-        <ul>
-            <li><strong>Xu, Shihao</strong>; Hao, Zhixiu; Chen, Xindong; Wan, Chao; Yu, Li; Feng, Xi Qiao. (2024). Viscoelastic Dynamics of Photothermal‐Responsive Liquid Crystal Elastomer Fibers. Advanced Functional Materials, 34(19), 2311425. <a href="https://doi.org/10.1002/adfm.202311425" target="_blank">[链接]</a></li>
-            <li>Chen, Xindong; <strong>Xu, Shihao</strong>; Chu, Bizhu; Guo, Jing; Zhang, Huikai; Sun, Shuyi; Song, Le; Feng, Xi-Qiao. (2024). Applying Spatiotemporal Modeling of Cell Dynamics to Accelerate Drug Development. ACS Nano, 18(43), 29311-29336. <a href="https://doi.org/10.1021/acsnano.4c12599" target="_blank">[链接]</a></li>
-        </ul>
+        <h2>代表论文</h2>
+        <div class="publication-item">
+            <div class="publication-title">Viscoelastic Dynamics of Photothermal‐Responsive Liquid Crystal Elastomer Fibers</div>
+            <div class="publication-authors"><strong>徐世浩</strong>; Hao, Zhixiu; Chen, Xindong; Wan, Chao; Yu, Li; Feng, Xi Qiao</div>
+            <div class="publication-journal">Advanced Functional Materials, 34(19), 2311425 (2024)</div>
+            <a href="https://doi.org/10.1002/adfm.202311425" class="publication-link" target="_blank">查看全文</a>
+        </div>
+        
+        <div class="publication-item">
+            <div class="publication-title">Applying Spatiotemporal Modeling of Cell Dynamics to Accelerate Drug Development</div>
+            <div class="publication-authors">Chen, Xindong; <strong>徐世浩</strong>; Chu, Bizhu; Guo, Jing; Zhang, Huikai; Sun, Shuyi; Song, Le; Feng, Xi-Qiao</div>
+            <div class="publication-journal">ACS Nano, 18(43), 29311-29336 (2024)</div>
+            <a href="https://doi.org/10.1021/acsnano.4c12599" class="publication-link" target="_blank">查看全文</a>
+        </div>
     </div>
 
     <!-- 英文内容 -->
     <div id="en" class="hidden">
         <img src="images/photo.jpg" alt="Photo" class="photo">
-        <h1><strong>Shihao Xu</strong>'s CV</h1>
+        <h1>Curriculum Vitae of <strong>Shihao Xu</strong></h1>
         
         <h2>Education</h2>
         <ul>
@@ -66,11 +202,20 @@
             <li>Google Scholar: <a href="https://scholar.google.com/citations?user=9hKtbYYAAAAJ" target="_blank">My Google Scholar Profile</a></li>
         </ul>
 
-        <h2>Publications</h2>
-        <ul>
-            <li><strong>Xu, Shihao</strong>; Hao, Zhixiu; Chen, Xindong; Wan, Chao; Yu, Li; Feng, Xi Qiao. (2024). Viscoelastic Dynamics of Photothermal-Responsive Liquid Crystal Elastomer Fibers. Advanced Functional Materials, 34(19), 2311425. <a href="https://doi.org/10.1002/adfm.202311425" target="_blank">[Link]</a></li>
-            <li>Chen, Xindong; <strong>Xu, Shihao</strong>; Chu, Bizhu; Guo, Jing; Zhang, Huikai; Sun, Shuyi; Song, Le; Feng, Xi-Qiao. (2024). Applying Spatiotemporal Modeling of Cell Dynamics to Accelerate Drug Development. ACS Nano, 18(43), 29311-29336. <a href="https://doi.org/10.1021/acsnano.4c12599" target="_blank">[Link]</a></li>
-        </ul>
+        <h2>Selected Publications</h2>
+        <div class="publication-item">
+            <div class="publication-title">Viscoelastic Dynamics of Photothermal-Responsive Liquid Crystal Elastomer Fibers</div>
+            <div class="publication-authors"><strong>Xu, Shihao</strong>; Hao, Zhixiu; Chen, Xindong; Wan, Chao; Yu, Li; Feng, Xi Qiao</div>
+            <div class="publication-journal">Advanced Functional Materials, 34(19), 2311425 (2024)</div>
+            <a href="https://doi.org/10.1002/adfm.202311425" class="publication-link" target="_blank">View Full Text</a>
+        </div>
+        
+        <div class="publication-item">
+            <div class="publication-title">Applying Spatiotemporal Modeling of Cell Dynamics to Accelerate Drug Development</div>
+            <div class="publication-authors">Chen, Xindong; <strong>Xu, Shihao</strong>; Chu, Bizhu; Guo, Jing; Zhang, Huikai; Sun, Shuyi; Song, Le; Feng, Xi-Qiao</div>
+            <div class="publication-journal">ACS Nano, 18(43), 29311-29336 (2024)</div>
+            <a href="https://doi.org/10.1021/acsnano.4c12599" class="publication-link" target="_blank">View Full Text</a>
+        </div>
     </div>
 
     <!-- 语言切换脚本 -->
